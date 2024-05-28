@@ -120,7 +120,7 @@ export default function ImageCarousel() {
                 alt={image.alt}
                 src={image.src}
               />
-              <p className="absolute bottom-[10%] left-1/2 z-10 mx-auto -translate-x-1/2 transform select-none bg-stone-800 bg-opacity-50 p-2 px-8 text-2xl text-secondary md:px-12 md:text-4xl lg:px-16 lg:text-6xl xl:text-8xl">
+              <p className="absolute bottom-[10%] left-1/2 z-10 mx-auto -translate-x-1/2 transform select-none bg-stone-800 bg-opacity-50 p-2 px-8 text-2xl text-slate-100 md:px-12 md:text-4xl lg:px-16 lg:text-6xl xl:text-8xl">
                 {image.alt}
               </p>
             </CarouselItem>
