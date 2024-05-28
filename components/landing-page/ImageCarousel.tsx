@@ -113,6 +113,7 @@ export default function ImageCarousel() {
             <CarouselItem
               key={index}
               className="embla__slide relative aspect-video"
+              onClick={() => onDotButtonClick(index)}
             >
               <Image
                 className="h-full w-full border-8 border-muted-foreground"
