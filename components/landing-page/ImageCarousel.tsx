@@ -97,7 +97,7 @@ export default function ImageCarousel() {
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(api);
 
   return (
-    <div className="my-16 image-carousel">
+    <div className="image-carousel mb-16 mt-16 2xl:mb-0 2xl:h-[calc(100vh-8rem)]">
       <Carousel
         setApi={setApi}
         opts={{
