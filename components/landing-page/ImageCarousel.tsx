@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import Autoplay from "embla-carousel-autoplay";
 import ClassNames from "embla-carousel-class-names";
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "./carousel.css";
 
 import home from "@/public/images/homepage/home.jpg";
@@ -94,10 +94,11 @@ const useDotButton = (
 
 export default function ImageCarousel() {
   const [api, setApi] = useState<CarouselApi>();
+  const plugins = useRef([Autoplay({ delay: 5000 }), ClassNames()]);
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(api);
 
   return (
-    <div className="image-carousel mb-16 mt-16 2xl:mb-0 2xl:h-[calc(100vh-8rem)]">
+    <div className="image-carousel py-12">
       <Carousel
         setApi={setApi}
         opts={{
@@ -105,24 +106,26 @@ export default function ImageCarousel() {
           loop: true,
           skipSnaps: true,
         }}
-        plugins={[Autoplay({ delay: 5000 }), ClassNames()]}
+        plugins={plugins.current}
         className="embla my-20"
       >
         <CarouselContent className="embla__container">
           {carouselItems.map((image, index) => (
             <CarouselItem
               key={index}
-              className="embla__slide relative aspect-video"
+              className="embla__slide"
               onClick={() => onDotButtonClick(index)}
             >
-              <Image
-                className="h-full w-full border-8 border-muted-foreground"
-                alt={image.alt}
-                src={image.src}
-              />
-              <p className="absolute bottom-[10%] left-1/2 z-10 mx-auto -translate-x-1/2 transform select-none bg-stone-800 bg-opacity-50 p-2 px-8 text-2xl text-slate-100 md:px-12 md:text-4xl lg:px-16 lg:text-6xl xl:text-8xl">
-                {image.alt}
-              </p>
+              <div className="relative">
+                <Image
+                  className="h-full w-full border-8 border-muted-foreground"
+                  alt={image.alt}
+                  src={image.src}
+                />
+                <p className="absolute bottom-[10%] left-1/2 z-10 mx-auto -translate-x-1/2 transform select-none bg-stone-800 bg-opacity-50 p-2 px-8 text-2xl text-slate-100 md:px-12 md:text-4xl lg:px-16 lg:text-6xl xl:text-8xl">
+                  {image.alt}
+                </p>
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>

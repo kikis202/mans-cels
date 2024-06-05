@@ -5,8 +5,8 @@
   width: 100%;
   margin: auto;
   --slide-height: 19rem;
-  --slide-spacing: 1rem;
-  --slide-size: 70%;
+  --slide-spacing: 5rem;
+  --slide-size: 80%;
 }
 
 .embla__container {
@@ -48,6 +48,11 @@
   border-width: 1px 1px 1px 0;
 }
 
+@media (max-width: 1536px) {
+  .embla {
+    --slide-spacing: 1rem;
+  }
+}
 @media (max-width: 1024px) {
   .image-carousel {
     --dot-width: 8rem;

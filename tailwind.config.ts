@@ -1,11 +1,11 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -51,6 +51,9 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        screens: {
+          "3xl": "1600px",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -77,8 +80,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate")
-  ],
+  plugins: [require("tailwindcss-animate")],
 };
 export default config;

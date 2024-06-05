@@ -3,7 +3,7 @@ import { type ReactNode } from "react";
 
 function TextArticle(props: { children: ReactNode }) {
   return (
-    <div className="flex w-full flex-col items-center bg-muted-foreground py-24 gap-8">
+    <div className="flex w-full flex-col items-center bg-muted-foreground py-16 md:py-24 gap-8">
       {props.children}
     </div>
   );
