@@ -25,7 +25,7 @@ export default function Home() {
             </blockquote>
           </Article>
           <Link href="/posms/home" className="relative w-full max-w-screen-xl">
-            <div className="absolute left-[15%] top-[10%]  flex select-none items-center gap-2 md:left-[20%] md:top-[20%]">
+            <div className="absolute left-[15%] top-[10%]  flex select-none items-center gap-2 text-secondary-foreground md:left-[20%] md:top-[20%]">
               <ArrowRightIcon className="h-6 w-6 sm:h-8 sm:w-8 md:h-12 md:w-12" />
               <p className="text-2xl sm:text-4xl md:text-6xl">Sāc ceļu</p>
             </div>
