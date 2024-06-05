@@ -14,9 +14,9 @@ export default function Home() {
         <ImageCarousel />
         <div className="flex w-full flex-col items-center space-y-16">
           <Article type="text">
-            <h1 className="mb-8 text-3xl text-background md:px-12 md:text-4xl lg:px-16 lg:text-5xl xl:text-6xl">
+            <h2 className="mb-8 text-3xl text-background md:px-12 md:text-4xl lg:px-16 lg:text-5xl xl:text-6xl">
               Par Mani
-            </h1>
+            </h2>
             <blockquote className="mx-8 max-w-screen-xl border-l-2 pl-6 text-lg italic text-background md:px-12 md:text-xl lg:px-16 lg:text-2xl xl:text-3xl 2xl:mx-0">
               Es esmu Kristaps, Latvijas Universitātes students. Es studēju
               programmēšanu un apgūstu tīmekļa dizaina pamatus. Kursa ietvaros
