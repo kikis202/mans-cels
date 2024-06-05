@@ -10,8 +10,36 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Link from "next/link";
 
-export default function Navigation() {
+const links = [
+  {
+    title: "Sākums",
+    href: "/",
+  },
+  {
+    title: "Mājas",
+    href: "/posms/home",
+  },
+  {
+    title: "Jūrmala",
+    href: "/posms/jurmala",
+  },
+  {
+    title: "Satiksme",
+    href: "/posms/traffic",
+  },
+  {
+    title: "Stāvvieta",
+    href: "/posms/parking",
+  },
+  {
+    title: "Universitāte",
+    href: "/posms/university",
+  },
+];
+
+export default function Navigation(props: { active: string }) {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -20,31 +48,17 @@ export default function Navigation() {
         </Button>
       </SheetTrigger>
       <SheetContent side="left">
-        <SheetHeader>
-          <SheetTitle>Edit profile</SheetTitle>
-          <SheetDescription>
-            Make changes to your profile here. Click save when you&apos;re done.
-          </SheetDescription>
-        </SheetHeader>
         <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            {/* <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" /> */}
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            {/* <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" /> */}
-          </div>
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`hover:font-bold hover:text-primary ${link.href === props.active ? "font-bold" : "text-muted-foreground"}`}
+            >
+              {link.title}
+            </Link>
+          ))}
         </div>
-        <SheetFooter>
-          <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
-          </SheetClose>
-        </SheetFooter>
       </SheetContent>
     </Sheet>
   );

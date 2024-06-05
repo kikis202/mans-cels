@@ -18,27 +18,33 @@ import jurmala from "@/public/images/homepage/jurmala.jpg";
 import traffic from "@/public/images/homepage/traffic.jpg";
 import parking from "@/public/images/homepage/parking.jpg";
 import university from "@/public/images/homepage/university.jpg";
+import Link from "next/link";
 
 const carouselItems = [
   {
     src: home,
     alt: "Mājas",
+    href: "/posms/home",
   },
   {
     src: jurmala,
     alt: "Jūrmala",
+    href: "/posms/jurmala",
   },
   {
     src: traffic,
     alt: "Satiksme",
+    href: "/posms/traffic",
   },
   {
     src: parking,
     alt: "Stāvvieta",
+    href: "/posms/parking",
   },
   {
     src: university,
     alt: "Universitāte",
+    href: "/posms/university",
   },
 ];
 
@@ -116,7 +122,10 @@ export default function ImageCarousel() {
               className="embla__slide"
               onClick={() => onDotButtonClick(index)}
             >
-              <div className="relative">
+              <Link
+                href={index === selectedIndex ? image.href : {}}
+                className="relative"
+              >
                 <Image
                   className="h-full w-full border-8 border-muted-foreground"
                   alt={image.alt}
@@ -125,7 +134,7 @@ export default function ImageCarousel() {
                 <p className="absolute bottom-[10%] left-1/2 z-10 mx-auto -translate-x-1/2 transform select-none bg-stone-800 bg-opacity-50 p-2 px-8 text-2xl text-slate-100 md:px-12 md:text-4xl lg:px-16 lg:text-6xl xl:text-8xl">
                   {image.alt}
                 </p>
-              </div>
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>
