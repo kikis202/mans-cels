@@ -3,7 +3,7 @@ import { type ReactNode } from "react";
 
 function TextArticle(props: { children: ReactNode }) {
   return (
-    <div className="flex w-full flex-col items-center gap-8 bg-muted-foreground py-16 md:py-24">
+    <div className="flex w-full flex-col items-center gap-8 bg-secondary py-16 md:py-24">
       {props.children}
     </div>
   );
@@ -15,7 +15,7 @@ function LeftImageArticle(props: {
   image: StaticImageData;
 }) {
   return (
-    <div className="flex w-full flex-col items-center gap-8 bg-muted-foreground py-16 md:py-24">
+    <div className="flex w-full flex-col items-center gap-8 bg-secondary py-16 md:py-24">
       <div className="flex w-full flex-col px-8 md:flex-row xl:px-0 max-w-screen-xl items-center gap-12">
         <Image
           src={props.image}
@@ -23,10 +23,10 @@ function LeftImageArticle(props: {
           className="aspect-[3/4] max-h-[50vh] w-auto"
         />
         <div>
-          <h2 className="mb-8 text-3xl text-background md:text-4xl lg:text-5xl xl:text-6xl">
+          <h2 className="mb-8 text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
             {props.title}
           </h2>
-          <p className="max-w-screen-xl text-lg text-background md:text-xl lg:text-2xl xl:text-3xl 2xl:mx-0">
+          <p className="max-w-screen-xl text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:mx-0">
             {props.description}
           </p>
         </div>

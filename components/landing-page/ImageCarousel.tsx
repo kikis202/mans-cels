@@ -127,11 +127,11 @@ export default function ImageCarousel() {
                 className="relative"
               >
                 <Image
-                  className="h-full w-full border-8 border-muted-foreground"
+                  className="h-full w-full border-8 border-border"
                   alt={image.alt}
                   src={image.src}
                 />
-                <p className="absolute bottom-[10%] left-1/2 z-10 mx-auto -translate-x-1/2 transform select-none bg-stone-800 bg-opacity-50 p-2 px-8 text-2xl text-slate-100 md:px-12 md:text-4xl lg:px-16 lg:text-6xl xl:text-8xl">
+                <p className="absolute bottom-[10%] left-1/2 z-10 mx-auto -translate-x-1/2 transform select-none bg-stone-800 bg-opacity-50 p-2 px-8 text-2xl text-secondary-foreground md:px-12 md:text-4xl lg:px-16 lg:text-6xl xl:text-8xl">
                   {image.alt}
                 </p>
               </Link>
@@ -146,7 +146,7 @@ export default function ImageCarousel() {
             key={index}
             onClick={() => onDotButtonClick(index)}
             className={`dot-button ${
-              index === selectedIndex ? "bg-muted-foreground" : ""
+              index === selectedIndex ? "bg-secondary-background" : ""
             }`}
           />
         ))}

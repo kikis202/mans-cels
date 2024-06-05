@@ -53,7 +53,7 @@ export default function Navigation(props: { active: string }) {
             <Link
               key={link.href}
               href={link.href}
-              className={`hover:font-bold hover:text-primary ${link.href === props.active ? "font-bold" : "text-muted-foreground"}`}
+              className={`hover:font-bold ${link.href === props.active ? "font-bold" : ""}`}
             >
               {link.title}
             </Link>

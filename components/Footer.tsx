@@ -6,8 +6,8 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="mt-12 flex w-full flex-col gap-4 bg-muted-foreground p-8 sm:flex-row sm:items-center sm:justify-between">
-      <p className="text-lg text-background">
+    <footer className="mt-12 flex w-full flex-col gap-4 bg-secondary p-8 sm:flex-row sm:items-center sm:justify-between">
+      <p className="text-lg">
         © 2024 Kristaps Kozulis. Mans ceļš uz Latvijas Universitāti.
       </p>
       <div className="flex gap-6">
@@ -17,7 +17,7 @@ export default function Footer() {
           target="_blank"
           className="-ml-1 p-1"
         >
-          <LinkedInLogoIcon className="h-6 w-6 text-background" />
+          <LinkedInLogoIcon className="h-6 w-6" />
         </a>
         <a
           href={"https://github.com/kikis202/"}
@@ -25,7 +25,7 @@ export default function Footer() {
           target="_blank"
           className="p-1"
         >
-          <GitHubLogoIcon className="h-6 w-6 text-background" />
+          <GitHubLogoIcon className="h-6 w-6" />
         </a>
         <a
           href={"https://x.com/kikis_0"}
@@ -33,7 +33,7 @@ export default function Footer() {
           target="_blank"
           className="-mr-1 p-1"
         >
-          <TwitterLogoIcon className="h-6 w-6 text-background" />
+          <TwitterLogoIcon className="h-6 w-6" />
         </a>
       </div>
     </footer>
