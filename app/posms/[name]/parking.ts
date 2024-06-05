@@ -6,7 +6,7 @@ export const content = [
   {
     image: img1,
     title: "Mans uzticamais transports",
-    description: "Ja no rīta ir slinkums, vai neesi pietiekami pamodies, lai ietu ar kājām, tad vienmēr var paļauties uz skūterīti."
+    description: "Ja no rīta ir slinkums, vai neesmu pietiekami pamodies, lai ietu ar kājām, tad vienmēr var paļauties uz skūterīti."
   },
   {
     image: img2,
